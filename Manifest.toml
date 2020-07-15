@@ -13,6 +13,11 @@ git-tree-sha1 = "46a10795eee19a0c8bf720bf121f51fbc83d8cc1"
 uuid = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
 version = "1.14.4"
 
+[[ExampleModule]]
+path = "src/ExampleModule"
+uuid = "cd60313d-efc1-4803-b076-5c7cff412b21"
+version = "0.1.0"
+
 [[FileIO]]
 deps = ["Pkg"]
 git-tree-sha1 = "202335fd24c2776493e198d6c66a6d910400a895"

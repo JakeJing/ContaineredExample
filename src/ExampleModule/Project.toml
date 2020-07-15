@@ -1,0 +1,4 @@
+name = "ExampleModule"
+uuid = "cd60313d-efc1-4803-b076-5c7cff412b21"
+authors = ["Steffen <steffen@robots.ox.ac.uk>"]
+version = "0.1.0"
