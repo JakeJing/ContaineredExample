@@ -40,6 +40,21 @@ julia > generate_deffile()
 julia > buildsif()
 ```
 
+### 3. Send the repository and singularity container to the cluster
+
+It seems that the packages are packed in two different folders (**1. containerhome**; **2. inside the protectcontainer.sif**). If you send the whole repository to the cluster, you may first need create a sandbox from the **protectcontainer.sif**.
+
+```bash
+singularity build --sandbox protectcontainer protectcontainer.sif
+```
+
+You need to specify the path in your bash script, so that julia can find the right package directory.
+
+```bash
+export JULIA_PKGDIR="sandbox/containerhome/.julia"
+export JULIA_PKGDIR="sandbox/protectcontainer/user/.julia"
+```
+
 
 
 Related links:
@@ -49,4 +64,5 @@ Related links:
 **Todo:**
 
 1. incorporate this with `PkgTemplates` to specify user-defined name for the project;
-2. write a wrapper function in the shell to automatically download the template and create a new repository with pre-defined name.
+2. write a wrapper function in the shell to automatically download the template and create a new repository with pre-defined name;
+3. it would be more convenient to collapse all the necessary packages in the same folder.
