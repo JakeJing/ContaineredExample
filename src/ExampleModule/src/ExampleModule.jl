@@ -1,3 +1,5 @@
+# functions in your example package or module
+
 module ExampleModule
 
 using Distances
